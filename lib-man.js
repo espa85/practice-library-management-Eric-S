@@ -88,22 +88,21 @@ class Book extends LibraryItem {
         super(title, id); 
         this.author = author;
         this.genre = genre;
-        this.isAvailable = true;
     }
 
     groupDescribeBook() {
         let status;
-        if (this.available) {
+        if (this.isAvailable) {
             status = "available";
         }
         else {
             status = "unavailable";
         }
-        return `${this.title} by ${this.author} is ${status} and is in the ${this.genre} section.`;
+        console.log(`${this.title} by ${this.author} is ${status} and is in the ${this.genre} section and is ${status}.`);
     }
 
     // myDescribeBook() {
-    //     return (`
+    //     console.log(`
     //         Title: \t${this.title}
     //         ID: \t${this.id}
     //         Author: \t${this.author}
@@ -118,22 +117,21 @@ class DVD extends LibraryItem {
         super(title, id); 
         this.director = director;
         this.duration = duration;
-        this.isAvailable = true;
     }
 
     groupDescribeDVD() {
         let status;
-        if (this.available) {
+        if (this.isAvailable) {
             status = "available";
         }
         else {
             status = "unavailable";
         }
-        return `${this.title} is directed by ${this.director}, is ${this.duration} minutes long and is ${status}.`;
+        console.log(`${this.title} is directed by ${this.director}, is ${this.duration} minutes long and is ${status}.`);
     }
 
     // myDescribeDVD() {
-    //     return (`
+    //     console.log(`
     //         Title: \t${this.title}
     //         ID: \t${this.id}
     //         Director: \t${this.director}
@@ -148,22 +146,21 @@ class Magazine extends LibraryItem {
         super(title, id); 
         this.issueNumber = issueNumber;
         this.publisher = publisher;
-        this.isAvailable = true;
     }
 
     groupDescribeMag() {
         let status;
-        if (this.available) {
+        if (this.isAvailable) {
             status = "available";
         }
         else {
             status = "unavailable";
         }
-        return `${this.title} is published by ${this.publisher}, the issue number is ${this.issueNumber} and is ${status}. The ID number is ${this.id}.`;
+        console.log(`${this.title} is published by ${this.publisher}, the issue number is ${this.issueNumber} and is ${status}. The ID number is ${this.id}.`);
     }
 
     // myDescribeMag() {
-    //     return (`
+    //     console.log(`
     //         Title: \t${this.title}
     //         ID: \t${this.id}
     //         Issue: \t${this.issueNumber}
